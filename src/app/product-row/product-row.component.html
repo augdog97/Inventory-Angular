@@ -1,0 +1,21 @@
+<!-- 
+    1. We first used our product-image directive and pass our product to the product input of the ProductImageComponent.
+        - We use the product-department in the same way.
+    2. price-display is different. We pass product.price instead of the product directly.
+-->
+
+<app-product-image [product]="product"></app-product-image>
+<div class="content">
+    <div class="header">
+        {{product.name}}
+    </div>
+    <div class="meta">
+        <div class="product-sku">
+            SKU #{{product.sku}}
+        </div>
+    </div>
+    <div class="description">
+        <app-product-department [product]="product"></app-product-department>
+    </div>
+</div>
+<app-price-display [price]="product.price"></app-price-display>

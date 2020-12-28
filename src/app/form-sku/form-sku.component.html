@@ -1,0 +1,22 @@
+<!-- 
+    1. ngForm is automatically attached to form tag when FormsModule is imported. 
+     - ngForm gives 2 functionality: 1. a Formgroup named ngForm and 2. (ngSubmit) output
+     - We declariing an alias of ngForm and setting to the variable "f"
+     - FormControl is the object used for respresenting the data and validations in the form. 
+        - camelCase "ngModel" is the selector of the directive NgModel and is used in the template. 
+    2. ngModel is the selector of NgModel. We can add a value or leave the attribute blank.
+        - if blank: it is set up for one way data binding and specifying that we want to create a FormControl on this form with the name "sku".
+        - NgModel creates a new FormControl that is automatically added to the parent FormGroup and then binds a DOM element to that new FormControl. 
+            - it sets up an association between the input tag in our view and the FormControl  and the associaion is matched by name, in this case "sku".
+-->
+
+<div class="ui raised segment">
+    <h2 class="ui header"> Demo Template Form: Sku</h2>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" class="ui form">
+        <div class="field">
+            <label for="skuInput">SKU</label>
+            <input type="text" id="skuInput" placeholder="SKU" name="sku" ngModel>
+        </div>
+        <button type="submit" class="ui button">Submit</button>
+    </form>
+</div>

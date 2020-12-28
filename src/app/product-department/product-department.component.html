@@ -1,0 +1,13 @@
+<!-- 
+    1. the ngFor loops over product.department and assigns each department string to "name". The new part is the second expression. "let i=index". This is how you get the iteration number out of ngFor. 
+    2. In the span tag we use the 'i' variable to determine if we should show the greater than > symbol. 
+        - The idea is that given a department, we want to show the department string like: Women > Apparel > Jackets.
+    3. The expression 'i < (product.department)' just says that we only want to use the '>' character if we are not the last department. On the last department just show an empty string ''. 
+-->
+
+<div class="product-department">
+    <span *ngFor="let name of product.department; let i=index">
+        <a href="#">{{ name }}</a>
+        <span>{{i < (product.department.length-1) ? '>' : '' }}</span>
+        </span>
+</div>

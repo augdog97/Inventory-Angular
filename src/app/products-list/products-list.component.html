@@ -1,0 +1,13 @@
+<!-- 
+    1. Using the ProductRow component. 
+    2. Using ngFor to iterate over each Product in productList.
+        - We want to pass myProduct (the local variable) to the input "product" of product-row
+    3. (click) defines what we want to do when this element is clicked 
+        - Click is a built in event that is triggered when the host element is clicked on.
+    4. class.selected is saying to add the CSS class slected if isSelected returns true.
+-->
+<div class="ui items">
+    <app-product-row *ngFor="let myProduct of productList" [product]="myProduct" (click)='clicked(myProduct)'
+        [class.selected]="isSelected(myProduct)">
+    </app-product-row>
+</div>
