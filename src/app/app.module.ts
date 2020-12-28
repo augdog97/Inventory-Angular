@@ -8,6 +8,8 @@ import { ProductRowComponent } from './product-row/product-row.component';
 import { ProductImageComponent } from './product-image/product-image.component';
 import { ProductDepartmentComponent } from './product-department/product-department.component';
 import { PriceDisplayComponent } from './price-display/price-display.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { FormNgModelComponent } from './form-ng-model/form-ng-model.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { PriceDisplayComponent } from './price-display/price-display.component';
     ProductRowComponent,
     ProductImageComponent,
     ProductDepartmentComponent,
-    PriceDisplayComponent
+    PriceDisplayComponent,
+    ReactiveFormComponent,
+    FormNgModelComponent
   ],
   imports: [
     BrowserModule,
