@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-sku.component.css']
 })
 export class FormSkuComponent implements OnInit {
-
+sku: string;
   constructor() { }
 
   ngOnInit(): void {
